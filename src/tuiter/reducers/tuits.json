@@ -1,0 +1,46 @@
+[{
+
+  "_id": 123,
+  "topic": "Space",
+  "userName": "SpaceX",
+  "title": "100s of SpaceX Starships land on Mars after a 6 month journey. 1000s of Martian colonists being building Mars Base 1",
+  "time": "2h",
+  "image": "../images/spacex.png",
+  "liked": true,
+  "replies": 123,
+  "retuits": 432,
+  "likes": 12345,
+  "handle": "@spacex",
+  "tuit": "After a series of weather delays, SpaceX launched 22 V2 mini Starlink satellites into low Earth orbit from Space Launch Complex 40 at Cape Canaveral Space Force Station just after midnight."
+},
+  {
+    "_id": 234,
+    "topic": "Automobiles",
+    "userName": "Tesla",
+    "title": "100s of SpaceX Starships land on Mars after a 6 month journey. 1000s of Martian colonists being building Mars Base 1",
+    "time": "4d",
+    "image": "../images/tesla.png",
+    "liked": true,
+    "replies": 432,
+    "retuits": 654,
+    "likes": 67896,
+    "handle": "@tesla",
+    "tuit": "Recent posts on social media have revealed that US Senator John Cornyn recently visited Tesla’s Gigafactory Texas complex. During his visit, the US official conversed with Tesla CEO Elon Musk. He was also photographed sitting inside what appears to be a Cybertruck release candidate. "
+  },
+  {
+
+  "_id": 345,
+  "topic": "Space",
+  "userName": "SpaceX",
+  "title": "100s of SpaceX Starships land on Mars after a 6 month journey. 1000s of Martian colonists being building Mars Base 1",
+  "time": "2h",
+  "image": "../images/spacex.png",
+  "liked": true,
+  "replies": 422,
+  "retuits": 532,
+  "likes": 4654,
+  "handle": "@spacex",
+  "tuit": "You want to wake up in the morning and think the future is going to be great - and that’s what being a spacefaring civilization is all about. It’s about believing in the future and thinking that the future will be better than the past. And I can’t think of anything more exciting than going out there and being among the stars"
+  }
+]
+
