@@ -1,10 +1,18 @@
 import React from "react";
-import { FaComment, FaRetweet, FaHeart, FaChartBar, FaShare } from "react-icons/fa";
+import { FaComment, FaRetweet, FaHeart, FaThumbsDown, FaChartBar, FaShare } from "react-icons/fa";
+import { updateTuitThunk } from "../services/tuits-thunks";
+import { useDispatch } from "react-redux";
 
-const TuitStats = ({ replies, retuits, likes, onLikeToggle, liked }) => {
+const TuitStats = ({ replies, retuits, likes, dislikes, onLikeToggle, liked, onDislikeToggle, disliked }) => {
   const handleLikeClick = () => {
     onLikeToggle(!liked);
   };
+
+  const handleDislikeClick = () => {
+    onDislikeToggle(!disliked);
+  };
+
+  const dispatch = useDispatch();
 
   return (
     <div style={tuitStatsContainerStyle}>
@@ -17,8 +25,20 @@ const TuitStats = ({ replies, retuits, likes, onLikeToggle, liked }) => {
         <span>{retuits}</span>
       </button>
       <button onClick={handleLikeClick} style={actionStyle}>
-        {liked ? <FaHeart style={heartLikedStyle} /> : <FaHeart style={heartUnlikedStyle} />}
+        {liked ? (
+          <FaHeart style={heartLikedStyle} />
+        ) : (
+          <FaHeart style={heartUnlikedStyle} />
+        )}
         <span>{likes}</span>
+      </button>
+      <button onClick={handleDislikeClick} style={actionStyle}>
+        {disliked ? (
+          <FaThumbsDown style={dislikeActiveStyle} />
+        ) : (
+          <FaThumbsDown style={dislikeInactiveStyle} />
+        )}
+        <span>{dislikes}</span>
       </button>
       <button style={actionStyle}>
         <FaChartBar />
@@ -56,6 +76,16 @@ const heartLikedStyle = {
 
 const heartUnlikedStyle = {
   fontSize: "16px",
+};
+
+const dislikeActiveStyle = {
+  fontSize: "16px",
+  color: "blue", // Adjust the color for an active dislike
+};
+
+const dislikeInactiveStyle = {
+  fontSize: "16px",
+  color: "#888", // Adjust the color for an inactive dislike
 };
 
 export default TuitStats;
